@@ -3,11 +3,11 @@
 BEGIN {
     base     = "peekfm"
 
-    data     = "artists"
+    filename = "artists"
     path     = "${XDG_DATA_HOME:-$HOME/.local/share}" "/" base
-    datapath = path "/" data
+    data     = path "/" filename
 
-    read(datapath)
+    read(data)
 }
 
 function read(data) {
