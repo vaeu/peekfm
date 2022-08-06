@@ -65,5 +65,6 @@ function scrape(name, link) {
 function stylise(name) {
     sub("/tmp/", "", name)
     sub(".html", "", name)
+    gsub("[+]", " ", name)
     return toupper(name)
 }
